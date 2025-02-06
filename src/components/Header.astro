@@ -6,13 +6,13 @@ const links = [
   {title: "Home", url: "/"},
   {title: "Profile", url: "/profile"},
   {title: "Blog", url: "/blog"},
-]
+];
 ---
 <header class="flex justify-between items-center p-4 shadow-md">
-  <div class="text-2xl font-bold">
+  <div class="text-2xl font-bold ml-8">
     <a href="/">{pageTitle}</a>
   </div>
   <nav class="space-x-8 mr-8">
-    {links.map((link) => <a href={link.url}>{link.title}</a>)}
+    {links.map((link) => <a href={link.url} class="hover:underline underline-offset-4 decoration-double">{link.title}</a>)}
   </nav>
 </header>
