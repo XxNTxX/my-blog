@@ -1,0 +1,57 @@
+---
+import Image from "astro/components/Image.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { snsLink } from "../components/Footer.astro";
+
+import "../styles/global.css";
+import profImage from "../assets/prof.jpg";
+---
+<BaseLayout>
+  <div class="max-w-md mx-auto text-center">
+    <Image 
+      src={profImage} 
+      alt="プロフィール画像" 
+      width={200} 
+      height={200} 
+      class="rounded-full mx-auto shadow-lg"
+    />
+
+    {/* プロフィール情報 */}
+    <div class="mt-6 text-lg">
+      <p class="font-semibold text-xl">XxNTxX</p>
+      <p class="mt-2 text-gray-600">CGやシミュレーションなどに興味があります。</p>
+
+      <div class="mt-6">
+        <p class="font-semibold text-left">言語:</p>
+        <ul class="list-disc list-inside text-left ml-6">
+          <li>C/C++</li>
+          <li>Python</li>
+          <li>JavaScript / TypeScript</li>
+        </ul>
+      </div>
+
+      <div class="mt-6">
+        <p class="font-semibold text-left">ライブラリ・フレームワーク:</p>
+        <ul class="list-disc list-inside text-left ml-6">
+          <li>Next.js (React)</li>
+          <li>Astro</li>
+          <li>p5.js</li>
+          <li>OpenGL (勉強中)</li>
+        </ul>
+      </div>
+
+      <div class="mt-6">
+        <p class="font-semibold text-left">SNS:</p>
+        <ul class="text-left ml-6">
+          {snsLink.map((link) => (
+            <li>
+              <a href={link.url} target="_blank" rel="noopener noreferrer" class="text-blue-500 hover:underline">
+                {link.title}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  </div>
+</BaseLayout>
