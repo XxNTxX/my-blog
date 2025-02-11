@@ -1,6 +1,12 @@
 ---
-
+const snsLink = [
+  {title: "Twitter", url: "https://x.com/xxntxx01"},
+  {title: "GitHub", url: "https://github.com/XxNTxX"},
+];
 ---
-<footer class="bg-gray-600 text-white">
-  <h3>footer</h3>
+<footer class="bg-gray-800 text-white text-center p-4 mt-auto">
+  <div class="flex justify-center gap-4">
+    {snsLink.map((link) => <a href={link.url} target="_blank" rel="noopener noreferrer">{link.title}</a>)}
+  </div>
+  <p>&copy; 2025 XxNTxX. All rights reserved.</p>
 </footer>
