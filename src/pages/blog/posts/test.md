@@ -1,5 +1,5 @@
 ---
-layout: ../../../layouts/BlogPostLayout.astro
+layout: '@layouts/BlogPostLayout.astro'
 title: 'テスト用の記事'
 pubDate: 2025-02-12
 description: 'テスト用の記事です。'
