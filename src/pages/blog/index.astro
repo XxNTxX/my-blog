@@ -1,30 +1,16 @@
 ---
-import type { MarkdownInstance } from "astro";
+import type { Post } from "@myTypes/index";
 import BaseLayout from "@layouts/BaseLayout.astro";
+import LatestPost from "@layouts/LatestPost.astro";
 
-interface Frontmatter {
-  title: string,
-  pubDate: string,
-  description: string,
-  tags: string[],
-}
-
-const allPosts = Object.values(import.meta.glob<MarkdownInstance<Frontmatter>>('./posts/**/*.md', { eager: true }));
+const allPosts = Object.values(import.meta.glob<Post>('./posts/**/*.md', { eager: true }));
 ---
 <BaseLayout>
-  <div class="max-w-md mx-auto text-center">
+  <div class="blog">
     <h1>ブログページ</h1>
     <p>プログラミングや読書についての記事を書いていく予定です。</p>
     <br/>
-    <h1>最新の投稿</h1>
-    <ul>
-    {allPosts.map((post) => (
-      <li>
-        <a href={post.url}>
-          {post.frontmatter.title}
-        </a>
-      </li>
-    ))}
-    </ul>
+    
+    <LatestPost posts={allPosts} />
   </div>
 </BaseLayout>

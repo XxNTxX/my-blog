@@ -1,0 +1,27 @@
+---
+import type { Post } from '@myTypes/index';
+
+import '@styles/global.css';
+
+interface Props {
+  posts: Post[],
+}
+
+const { posts } = Astro.props;
+posts.sort((a, b) => new Date(b.frontmatter.pubDate) - new Date(a.frontmatter.pubDate));
+---
+<h1 class="font-bold text-2xl mb-6">最新の投稿</h1>
+<div class="grid grid-cols-1 gap-6">
+  {posts.map((post) => (
+    <div class="bg-white rounded-lg shadow p-4 hover:shadow-lg transition-shadow">
+      <a href={post.url} class="block">
+        <div class="text-sm text-gray-500 mb-2">
+          {post.frontmatter.pubDate.slice(0, 10)}
+        </div>
+        <h3 class="font-semibold text-lg text-gray-800">
+          {post.frontmatter.title}
+        </h3>
+      </a>
+    </div>
+  ))}
+</div>
