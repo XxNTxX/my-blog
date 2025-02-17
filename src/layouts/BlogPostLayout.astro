@@ -1,7 +1,12 @@
 ---
+import type { Frontmatter } from "@myTypes/index";
 import BaseLayout from "./BaseLayout.astro";
 
 import '@styles/blog.css';
+
+interface Props {
+  frontmatter: Frontmatter
+}
 
 const { frontmatter } = Astro.props;
 ---

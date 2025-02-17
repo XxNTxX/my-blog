@@ -1,6 +1,6 @@
 import type { MarkdownInstance } from "astro";
 
-interface Frontmatter {
+export interface Frontmatter {
   title: string,
   pubDate: string,
   description: string,
