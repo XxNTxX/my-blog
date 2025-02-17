@@ -1,7 +1,7 @@
 ---
 import type { Post } from "@myTypes/index";
 import BaseLayout from "@layouts/BaseLayout.astro";
-import LatestPost from "@layouts/LatestPost.astro";
+import LatestPost from "@components/LatestPost.astro";
 
 const allPosts = Object.values(import.meta.glob<Post>('./posts/**/*.md', { eager: true }));
 ---

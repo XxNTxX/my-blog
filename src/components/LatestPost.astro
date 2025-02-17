@@ -5,14 +5,15 @@ import '@styles/global.css';
 
 interface Props {
   posts: Post[],
+  num?: number,
 }
 
-const { posts } = Astro.props;
+const { posts, num = 5 } = Astro.props;
 posts.sort((a, b) => new Date(b.frontmatter.pubDate) - new Date(a.frontmatter.pubDate));
 ---
 <h1 class="font-bold text-2xl mb-6">最新の投稿</h1>
 <div class="grid grid-cols-1 gap-6">
-  {posts.map((post) => (
+  {posts.slice(0, num).map((post) => (
     <div class="bg-white rounded-lg shadow p-4 hover:shadow-lg transition-shadow">
       <a href={post.url} class="block">
         <div class="text-sm text-gray-500 mb-2">
