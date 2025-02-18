@@ -1,0 +1,11 @@
+---
+import '@styles/global.css';
+
+const { tagName } = Astro.props;
+---
+<a 
+  href={`/blog/tags/${tagName}`} 
+  class="text-gray-800 bg-gray-200 p-2 text-base m-2 rounded border border-gray-300 hover:bg-gray-300 hover:text-gray-900 transition-colors duration-200"
+>
+  {tagName}
+</a>

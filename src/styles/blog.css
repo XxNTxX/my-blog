@@ -5,7 +5,7 @@
   margin-bottom: 15%;
   line-height: 1.8;
   font-family: 'Helvetica', 'Arial', sans-serif;
-  color: #333333;
+  color: #333;
 }
 
 /* ヘッダー */
@@ -15,7 +15,7 @@
 .post h4, 
 .post h5, 
 .post h6 {
-  color: #222222;
+  color: #222;
   margin-top: 1em;
   margin-bottom: 0.5em;
   line-height: 1.3;
@@ -45,13 +45,13 @@
 .post h5, 
 .post h6 {
   font-size: 1em;
-  color: #666666;
+  color: #666;
 }
 
 /* 段落 */
 .post p {
   margin: 1em 0;
-  color: #444444;
+  color: #444;
 }
 
 /* リスト */
@@ -70,18 +70,18 @@
 }
 
 .post ul li::marker {
-  color: #555555;
+  color: #555;
 }
 
 .post ol li {
-  color: #444444;
+  color: #444;
 }
 
 /* 引用 */
 .post blockquote {
   border-left: 4px solid #ccc;
   padding-left: 1em;
-  color: #555555;
+  color: #555;
   margin: 1.5em 0;
   font-style: italic;
   background-color: #f9f9f9;
@@ -92,7 +92,7 @@
 /* コードブロック */
 .post pre {
   background-color: #f5f5f5;
-  color: #333333;
+  color: #333;
   padding: 1em;
   border-radius: 4px;
   overflow-x: auto;
@@ -137,7 +137,7 @@
 }
 
 .post td {
-  background-color: #ffffff;
+  background-color: #fff;
 }
 
 /* 画像 */
@@ -146,13 +146,6 @@
   border-radius: 4px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   margin: 1em 0;
-}
-
-/* タグや投稿日など */
-.post-header {
-  border-bottom: 2px solid #ddd;
-  padding-bottom: 0.3em;
-  margin-bottom: 2em;
 }
 
 .post .footnotes {
